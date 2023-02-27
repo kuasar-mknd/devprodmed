@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\controllerJour2;
+use App\Http\Controllers\proverbeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +18,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('artistes', [controllerJour2::class,'afficheTab']);
+Route::get('artistes/{letter}', [controllerJour2::class,'afficheTab']);
+
+Route::get('proverbes', [proverbeController::class,'afficheProverbes']);
 
 
 

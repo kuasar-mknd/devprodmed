@@ -18,5 +18,9 @@ Route::get('/', function () {
 });
 
 
+// Route to resource agenda
+Route::resource('agenda', 'AgendaController');
 
+// Route to resource people_list
+Route::resource('people_list', 'PeopleListController');
 
